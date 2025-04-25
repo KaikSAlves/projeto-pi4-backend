@@ -24,13 +24,16 @@ public class Usuario {
     @Setter(AccessLevel.NONE)
     private Integer id;
 
-    @Column(nullable = false, unique = true, length = 100)
+    @Column(nullable = false, unique = true, length = 100, name = "nm_usuario")
     private String nome;
 
-    @Column(nullable = false, unique = true, length = 250)
+    @Column(nullable = false, unique = true, length = 250, name = "email_usuario")
     private String email;
 
+    @Column(name = "tel_usuario")
     private String telefone;
+    
+    @Column(name = "senha_usuario")
     private String senha;
 
     public Usuario(String nome, String email, String telefone, String senha) {
