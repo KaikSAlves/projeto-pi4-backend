@@ -22,6 +22,7 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Setter(AccessLevel.NONE)
+    @Column(name = "id_usuario")
     private Integer id;
 
     @Column(nullable = false, unique = true, length = 100, name = "nm_usuario")

@@ -7,23 +7,28 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity
-@Table(name = "tb_estoque")
+
 @Getter
 @Setter
 @NoArgsConstructor
+@Entity
+@Table(name = "tb_estoque")
 public class Estoque {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_estoque")
     private Integer id;
 
-    @Column(name = "produto_estoque", nullable = false)
+    @OneToOne
+    @JoinColumn(name = "id_produto", nullable = false)
     private Produto produto;
 
     @Column(name = "qtd_disponivel")

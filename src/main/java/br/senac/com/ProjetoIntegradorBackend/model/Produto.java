@@ -12,15 +12,18 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity
-@Table(name = "tb_produto")
+
+
 @Getter
 @Setter
 @NoArgsConstructor
-public abstract class Produto {
+@Entity
+@Table(name = "tb_produto")
+public class Produto {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_produto")
     private Integer id;
 
     @Enumerated

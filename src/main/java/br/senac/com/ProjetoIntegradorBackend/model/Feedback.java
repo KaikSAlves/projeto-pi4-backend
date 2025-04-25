@@ -12,15 +12,17 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Table(name = "tb_feedback")
-@Entity
+
 @Getter
 @Setter
 @NoArgsConstructor
+@Table(name = "tb_feedback")
+@Entity
 public class Feedback {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_feedback")
     private Integer id;
 
     @Column(name = "data_feedback")
