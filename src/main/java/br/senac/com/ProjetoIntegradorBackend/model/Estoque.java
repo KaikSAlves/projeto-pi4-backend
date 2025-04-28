@@ -40,13 +40,13 @@ public class Estoque {
     private int qtdMinima;
 
     @Column(name = "data_atualizacao")
-    private LocalDateTime data;
+    private LocalDateTime dataAtualizacao;
 
     public Estoque(Produto produto, int qtdDisponivel, int qtdMinima, LocalDateTime data) {
         this.produto = produto;
         this.qtdDisponivel = qtdDisponivel;
         this.qtdMinima = qtdMinima;
-        this.data = data;
+        this.dataAtualizacao = data;
     }
 
 }

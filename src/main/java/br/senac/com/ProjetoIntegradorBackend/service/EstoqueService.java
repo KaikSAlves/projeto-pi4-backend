@@ -42,7 +42,7 @@ public class EstoqueService {
     }
 
     private void updateData(Estoque e1, Estoque e){
-        e1.setData(e.getData());
+        e1.setDataAtualizacao(e.getDataAtualizacao());
         e1.setProduto(e.getProduto());
         e1.setQtdDisponivel(e.getQtdDisponivel());
         e1.setQtdMinima(e.getQtdMinima());
