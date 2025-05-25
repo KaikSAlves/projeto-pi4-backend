@@ -1,6 +1,5 @@
 package br.senac.com.ProjetoIntegradorBackend.model;
 
-import br.senac.com.ProjetoIntegradorBackend.model.enums.TipoProduto;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Enumerated;
@@ -28,9 +27,8 @@ public class Produto {
     @Column(name = "id_produto")
     private Integer id;
 
-    @Enumerated
     @Column(length = 100, nullable = false, name = "tipo_produto")
-    private TipoProduto tipo;
+    private String tipo;
 
     @Column(length = 200, nullable = false, name = "sabor_produto")
     private String sabor;
@@ -38,10 +36,14 @@ public class Produto {
     @Column(length = 350, name = "desc_produto")
     private String descricao;
 
+    @Column(nullable = false, name = "qtd_estoque")
+    private Integer quantidade;
+
     @Column(nullable = false, name = "valor_produto")
     private Double valor;
 
-    public Produto(TipoProduto tipo, String sabor, String descricao, Double valor) {
+    public Produto(String tipo, String sabor, String descricao, Double valor, Integer quantidadeEstoque) {
+        this.quantidade = quantidadeEstoque;
         this.tipo = tipo;
         this.sabor = sabor;
         this.descricao = descricao;

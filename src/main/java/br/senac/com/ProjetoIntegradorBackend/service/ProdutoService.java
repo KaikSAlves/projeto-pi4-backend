@@ -44,6 +44,7 @@ public class ProdutoService {
         p1.setDescricao(p.getDescricao());
         p1.setSabor(p.getSabor());
         p1.setTipo(p.getTipo());
+        p1.setQuantidade(p.getQuantidade());
         p1.setValor(p.getValor());
     }
 
